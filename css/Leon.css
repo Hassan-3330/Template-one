@@ -3,7 +3,6 @@
   --main-color: #10cab7;
   --secondary-color : #2c4755;
   --section-padding:60px;
-  border: 1px solid red;
 }
 /* end variables */
 /*start components */
@@ -150,7 +149,7 @@ body {
 /* end header */
 /*start landing section */
 .landing {
-  background-image:url(../images/mountain.jpg);
+  background-image:url(../images/landing.jpg);
   background-size: cover ;
   height :calc(100vh - 64px);
   position :relative;
@@ -161,9 +160,7 @@ body {
   left:50%;
   top:50%;
   transform: translate(-50%,-50%);
-  /*لجعل السطر يظهر على سطرين في مختلف الشاشات نحدد العرض، إذا لم نحدد العرض فسوف يشغل عرض الشاشة كاملا*/
   width :320px;
-  /*حتى لاتحدث اي حالة تجاوز لل container */
   max-width :100%;
 }
 .landing .intro-text h1 {
@@ -354,7 +351,6 @@ body {
   height :375px;
 }
 .about .about-content .text {
-/* فرضنا إن الصورة مع عناصرها سوف تحتاج إلى 500 بكسل سواء بالطول أو العرض، فسوف يشغل النص المساحة المتبقية*/
   flex-basis: calc(100% - 500px);
 }
 .about .about-content .text p {
@@ -405,9 +401,19 @@ body {
   font-size :16px;
   align-items :center ;
 }
-.contact .info .social i {
+.contact .info .social a {
   margin-left :15px ;
   color: var(--secondary-color);
+  text-decoration :none;
+}
+.contact .info .social .fa-youtube {
+  color: #E90506;
+}
+.contact .info .social .fa-facebook-f {
+  color: #3B5998;
+}
+.contact .info .social .fa-twitter {
+  color:#55ACEE
 }
 @media (max-width:767px){
   .contact .info .label,.contact .info .link {
